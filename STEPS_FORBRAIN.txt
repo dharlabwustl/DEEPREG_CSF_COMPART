@@ -1,0 +1,7 @@
+StepsForDeepRegOnBrainCT
+1. Assign Template CT as moving CT
+1. Assign target CT as fixed CT
+2. Register moving to the fixed using linear registration of the FSL.: TransformTemplateCompleteImage.sh
+3, Register tempalte csf ventricle mask with the linear transfomration matix.:TransformTemplateVentricleMaskonly.sh
+4.Register the transformed moving CT to the target CT using DeepReg:call_demo_register_batch_atul.sh
+5. deform  the linearly transformed ventricle mask using the DeepReg ddf file : call_runoncsfmask_batch_atul.sh
