@@ -8,7 +8,8 @@ echo TYPE_OF_PROGRAM::${TYPE_OF_PROGRAM}
 #echo ${REDCAP_API}
 conda activate deepreg
 if [[ ${TYPE_OF_PROGRAM} == 1 ]]; then
-  /software/call_register_batch.sh ${SESSION_ID} $XNAT_USER $XNAT_PASS $XNAT_HOST
+  echo " I AM HERE "
+  ##/software/call_register_batch.sh ${SESSION_ID} $XNAT_USER $XNAT_PASS $XNAT_HOST
 fi
 
 ##########################################################
