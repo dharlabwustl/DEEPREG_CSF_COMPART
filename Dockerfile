@@ -1,4 +1,4 @@
-FROM sharmaatul11/deepregsep82023
+FROM sharmaatul11/deepreg:sept292023.1
 #sharmaatul11/fsl502py369ltx-full:latest
 RUN apt update
 RUN mkdir /templateventricle
