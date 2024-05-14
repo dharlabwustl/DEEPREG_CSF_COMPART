@@ -9,8 +9,8 @@ echo TYPE_OF_PROGRAM::${TYPE_OF_PROGRAM}
 conda activate deepreg
 if [[ ${TYPE_OF_PROGRAM} == 1 ]]; then
   echo " I AM HERE "
-  /opt/conda/envs/deepreg/bin/python test.py
-  ##/software/call_register_batch.sh ${SESSION_ID} $XNAT_USER $XNAT_PASS $XNAT_HOST
+#  /opt/conda/envs/deepreg/bin/python test.py
+  /software/call_register_batch.sh ${SESSION_ID} $XNAT_USER $XNAT_PASS $XNAT_HOST
 fi
 
 ##########################################################
