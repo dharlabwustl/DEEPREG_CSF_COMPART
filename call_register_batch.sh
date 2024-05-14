@@ -874,13 +874,13 @@ outputfiles_present=$(python utilities_atul.py "${call_createh5file_arguments[@]
 ## Register
 template_gray_filename_h5=${directory_name}/${file_prefix}"_resaved_levelset_brain_fscct_strippedResampled1lin1_1_h5data.h5"
 non_rigid_regis_output_dir=${directory_name}"/${output_directory}"
-outputfiles_present=$(python demos/classical_mr_prostate_nonrigid/register_batch_Sep26_2023.py  ${template_gray_filename_h5} ${non_rigid_regis_output_dir} ) ###"${call_register_template_to_a_ct_arguments[@]}")
+outputfiles_present=$(python register_batch_Sep26_2023.py  ${template_gray_filename_h5} ${non_rigid_regis_output_dir} ) ###"${call_register_template_to_a_ct_arguments[@]}")
 #####################
 ## transform the required nifti file based on the registration ddf file
 h5file_containing_data_tobe_transformed=${directory_name}/${file_prefix}'_resaved_levelset_brain_fscct_strippedResampled1_onlyventricle_lin1_1_h5data.h5'
 non_rigid_regis_mask_output_dir=${directory_name}/${output_directory}_1
 ddffile=${non_rigid_regis_output_dir}/${file_prefix}_ddf.nii.gz
-outputfiles_present=$(python demos/classical_mr_prostate_nonrigid/transform_with_ddf.py  ${h5file_containing_data_tobe_transformed} ${ddffile} ${non_rigid_regis_mask_output_dir} )
+outputfiles_present=$(python transform_with_ddf.py  ${h5file_containing_data_tobe_transformed} ${ddffile} ${non_rigid_regis_mask_output_dir} )
     
     ## get the vertical extent:
 transformed_ventricle=${non_rigid_regis_mask_output_dir}/${file_prefix}"_T_APPLIED_warped_moving_label.nii.gz"
